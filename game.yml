@@ -1,15 +1,10 @@
-# Game values
-# You want to edit these to fit your game.
-name: "RS Mod Server"
+name: "BatRS"
 game-port: 43594
 revision: 181
 
-# The coordinates for the home location.
 home-x: 3087
 home-z: 3497
 
-# Privileges
-# Any privilege you want to be represented in-game you define here.
 privileges:
   - id: 0
     icon: 0
@@ -29,7 +24,6 @@ privileges:
     powers: ["mod", "dev", "admin", "owner"]
 
 # Game services
-# You can pick and choose which services you want to run.
 services:
   - class: gg.rsmod.game.service.serializer.json.JsonPlayerSerializer
 
