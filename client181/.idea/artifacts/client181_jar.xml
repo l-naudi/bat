@@ -1,9 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="jar" name="client181:jar">
-    <output-path>$PROJECT_DIR$/out/artifacts/client181_jar</output-path>
-    <root id="archive" name="client181.jar">
-      <element id="module-output" name="client181" />
-      <element id="library" level="project" name="KotlinJavaRuntime" />
-    </root>
-  </artifact>
-</component>
