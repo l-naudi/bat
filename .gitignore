@@ -1,8 +1,10 @@
-/.idea
+.gradle/
+.idea/
+build/
 
-/build
+data/cache/
+data/xteas/
+data/rsa/
+data/saves/
 
-/data/cache
-/data/xteas
-/data/rsa
-/data/saves
+error.log
