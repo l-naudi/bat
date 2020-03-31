@@ -58,6 +58,11 @@ on_command("home", Privilege.ADMIN_POWER) {
     player.moveTo(home)
 }
 
+on_command("dev", Privilege.ADMIN_POWER) {
+    val dev = world.gameContext.dev
+    player.moveTo(dev)
+}
+
 on_command("obank", Privilege.ADMIN_POWER) {
     player.openBank()
 }

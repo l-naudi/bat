@@ -5,6 +5,9 @@ revision: 181
 home-x: 3087
 home-z: 3497
 
+dev-x: 1825
+dev-z: 4505
+
 privileges:
   - id: 0
     icon: 0
