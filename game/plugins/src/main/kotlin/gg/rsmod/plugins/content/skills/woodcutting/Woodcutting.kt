@@ -3,7 +3,9 @@ package gg.rsmod.plugins.content.skills.woodcutting
 import gg.rsmod.game.fs.def.ItemDef
 import gg.rsmod.game.model.entity.DynamicObject
 import gg.rsmod.game.model.entity.GameObject
+import gg.rsmod.game.model.entity.GroundItem
 import gg.rsmod.game.model.entity.Player
+import gg.rsmod.game.model.item.Item
 import gg.rsmod.game.model.queue.QueueTask
 import gg.rsmod.plugins.api.Skills
 import gg.rsmod.plugins.api.ext.*
@@ -34,6 +36,11 @@ object Woodcutting {
             val level = p.getSkills().getCurrentLevel(Skills.WOODCUTTING)
 
             if (level.interpolate(minChance = 60, maxChance = 190, minLvl = 1, maxLvl = 99, cap = 255)) {
+                if (p.world.random(1..256) == 0) {
+                    spawnNest(p);
+                    continue;
+                }
+
                 p.filterableMessage("You get some ${log.pluralSuffix(2)}.")
                 p.playSound(3600)
 
@@ -59,8 +66,6 @@ object Woodcutting {
 
                     break
                 }
-
-                // TODO birds nests
             }
 
             it.wait(2)
@@ -91,5 +96,10 @@ object Woodcutting {
         }
 
         return true
+    }
+
+    private fun spawnNest(p: Player) {
+        p.filterableMessage("A bird's nest falls out of the tree.")
+        p.world.spawn(GroundItem(Nest.roll(p), 1, p.tile))
     }
 }
