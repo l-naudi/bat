@@ -47,7 +47,8 @@ val itemCache : HashMap<Bar, HashMap<Int, SmithingMetaData?>> = HashMap()
  * The set of 'standard' anvils in the game
  */
 private val standardAnvils = setOf(
-    Objs.ANVIL_2097
+        Objs.ANVIL, Objs.ANVIL_2097, Objs.ANVIL_4306, Objs.ANVIL_6150, Objs.ANVIL_22725,
+        Objs.BARBARIAN_ANVIL, Objs.ANVIL_28563
 )
 
 /**
